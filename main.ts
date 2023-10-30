@@ -17,7 +17,7 @@ console.info("Mongo Concectado")
 const app= express();
 app.use(express.json())
 app.post("/api/tierramedia/personajes",addCharacter)
-    .get("/getPerson/:dni", getPersonaje)
+    .get("/getPerson/:name", getPersonaje)
 
 app.listen(PORT,()=> console.info ((`Te estoy escuchando desde ${PORT}`)));
 }catch(e){
