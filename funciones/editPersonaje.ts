@@ -35,4 +35,3 @@ export const updatePerson = async (req: Request, res: Response) => {
   }
 };
 
-export default updatePerson;

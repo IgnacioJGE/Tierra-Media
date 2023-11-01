@@ -1,7 +1,7 @@
 import { Request, Response } from "npm:express@4.18.2";
 import { ModeloPerson } from "../db/personajes.ts";
 
-const getPersonaje = async (req: Request, res: Response) => {
+export const getPersonajes = async (req: Request, res: Response) => {
   try {
     const persons = await ModeloPerson.find().exec();
 
@@ -24,4 +24,3 @@ const getPersonaje = async (req: Request, res: Response) => {
   }
 };
 
-export default getPersonaje;
