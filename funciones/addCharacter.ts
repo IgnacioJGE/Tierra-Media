@@ -29,6 +29,7 @@ export const addCharacter = async (req: Request, res: Response) => {
       name: newPersonaje.name,
       raza: newPersonaje.raza,
       descripcion: newPersonaje.descripcion,
+      habilidades: newPersonaje.habilidades,
       id: newPersonaje._id.toString(),
     });
   } catch (error) {

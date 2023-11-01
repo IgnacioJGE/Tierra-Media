@@ -1,5 +1,5 @@
 export type Personaje = {
-  id: string;
+    id: string;
     name: string;
     raza: RAZAS;
     descripcion: string;

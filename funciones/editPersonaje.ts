@@ -3,16 +3,15 @@ import { ModeloPerson } from "../db/personajes.ts";
 
 export const updatePerson = async (req: Request, res: Response) => {
   try {
-    const id =req.params._id;
-
-    const { name , raza, descripcion,habilidades } = req.body;
-    if (!name || !raza|| !descripcion|| !habilidades) {
-      res.status(400).send("Name and age are required");
+    const _id=req.params.id;
+    const {name, raza, descripcion, habilidades } = req.body;
+    if (!name || !raza || !descripcion || !habilidades) {
+      res.status(400).send("no has puesto todos los parametros");
       return;
     }
 
     const updatedPerson = await ModeloPerson.findByIdAndUpdate(
-      {id},
+      {_id},
       { name, raza, descripcion, habilidades },
       { new: true }
     ).exec();

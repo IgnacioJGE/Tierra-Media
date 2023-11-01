@@ -20,8 +20,8 @@ const app= express();
 app.use(express.json())
 app.post("/api/tierramedia/personajes",addCharacter)
     .get("/getPerson/:name", getPersonaje)
-    .put("/updatePersonaje",updatePerson)
-    .get("getAllpersonajes",getPersonajes)
+    .put("/updatePersonaje/:id",updatePerson)
+    .get("/getAllpersonajes",getPersonajes)
 
 app.listen(PORT,()=> console.info ((`Te estoy escuchando desde ${PORT}`)));
 }catch(e){

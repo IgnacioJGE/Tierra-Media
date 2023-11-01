@@ -4,7 +4,7 @@ import {ModeloPerson} from "../db/personajes.ts";
 
 export const getPersonaje = async (req: Request, res: Response) => {
   try {
-    const { name } = req.params;
+    const { name } = req.params.name;
     const personaje = await ModeloPerson.findOne({ name }).exec();
     if (!personaje) {
       res.status(404).send("Personaje not found");
